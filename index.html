@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>MAPS-6 - HTML Presentation SISBIO</title>
+
+		<meta name="description" content="SISBIO, un Automate cellulaire pour explorer les dynamiques socio-spatiales des territoire ">
+		<meta name="author" content="Etienne DELAY">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3>Cohabitation entre </br>
+					    agriculture conventionnel et agriculture Biologique</h3>
+					<h4>de l'automate cellulaire au territoire</h4>
+					<p>
+						<small>Par <a href="http://recherche.flsh.unilim.fr/geolab/etienne-delay/">Etienne DELAY</a> / laboratoire GEOLAB UMR 6042 CNRS</small><br>
+						<small>Sur twitter : <a href="https://twitter.com/ElCep">@ElCep</a></small></br>
+						<small><a href="http://maps.csregistry.org/tiki-index.php?page=MAPS-6">Modélisation des Phénomènes Spatiaux</a> / MAPS-6</small></br>
+						<small> 18 décembre 2013 / <a href="http://www.openstreetmap.org/?mlat=48.8358&mlon=2.3721#map=15/48.8358/2.3721">MSH-Paris</a></small>
+
+					</p>
+					<aside class="notes">
+					  Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<!-- INTRODUCTION SUR DES SLIDES VERTICLE avec des sections impriqué -->
+				<section>
+					<section>
+						<h2>Introduction</h2>
+					</section>
+					<section>
+						<h3>Au commencement il y a ...</h3>
+						<p>Un travail de groupe qui commence lors de <a href="http://maps.csregistry.org/tiki-index.php?page=maps-5">MAPS-5</a> à <a href="http://www.openstreetmap.org/?mlat=45.9513&mlon=-1.2470#map=16/45.9513/-1.2470">Olérons</a> en juin 2013</p>
+						<table>
+						  <td>
+						    
+						    <ul>
+						      <li><b><a href="http://www.univ-tours.fr/acces-rapide/mme-amalric-marion-213061.kjsp">Marion Amalric</a> </b>(CITERES)</li>
+						      <li><b><a href="http://www.parisgeo.cnrs.fr/spip.php?article5&lang=fr">Anaud Banos</a> </b> (UMR 8504 Géographie-Cités)</li>
+						      <li>Marta Debolini (INRA - UMR EMMAH)</li>
+						      <li><a href="http://recherche.flsh.unilim.fr/geolab/etienne-delay/">Etienne Delay</a> (GEOLAB)</li>
+						      <li>Aurelie Gaudieux (CEMOI et C3EDM)</li>
+						      <li><a href="http://www.hugothierry.com">Hugo Thierry</a> (UMR DYNAFOR -  INRA/INPT-ENSAT )</li>
+						      <li>Romain Reulier (LETG)</li>
+						   </ul>
+						  </td>
+						  <td> 
+						    <img src="img/groupMAPS5-sc.jpg">
+						  </td>
+						</table>
+						
+						
+					</section>
+					<section data-background="img/agri-toys.jpg" data-background-transition="slide">
+						<h3>Travail sur l'évolution des paysages</h3>
+						<p>Nous voulions tous travailler sur une question autour des paysages, en lien avec l'agriculture</br>
+						<ul>
+						    <li>Notre premier modèle = caricature de l'oposition Bio VS OGM</li>
+						    <li>Une question de fond sur le productivisme agricole au regard de la société</li>
+						</ul>
+						</p>
+						<small>crédit photo : <a href="http://www.flickr.com/photos/chanceprojects/">Neil Cummings</a>  sur flickr</small>
+					</section>
+						<section>
+						<h3>Une réponse : la modélisation</h3>
+						<blockquote cite="http://www.amazon.fr/MODELISATION-SIMULATION-DECOSYSTEMES-d%C3%A9terministes-simulations/dp/2225853630">
+						&ldquo;un modèle est une abstraction qui simplifie le système réel étudié [...], pour se focaliser sur les aspects qui intéressent le modélisateur&rdquo;</br>
+						</blockquote>
+						<p align="right">P. Coquillard et D.R.C. Hill 1997</p>
+						<blockquote cite="http://www.amazon.fr/Mod%C3%A9liser-social-M%C3%A9thodes-fondatrices-%C3%A9volutions/dp/2100557440/ref=sr_1_1?s=books&ie=UTF8&qid=1384531308&sr=1-1">
+						&ldquo;un modèle a pour fonction d'être un instrument de facilitation d'une médiation&rdquo;</br>
+						</blockquote>
+						<p align="right">M.S. Morgan et M. Morrison 1999</p>
+					</section>
+					<section>
+						<h3>Prédire &ne; Expliquer</h3>
+						<blockquote cite="http://www.amazon.fr/Pr%C3%A9dire-nest-expliquer-Rene-Thom/dp/2081224984/ref=sr_1_1?ie=UTF8&qid=1384529013&sr=8-1&keywords=predire+n%27est+pas+expliquer">
+						&ldquo;La théorisation [...] est liée à la possibilité de plonger le réel dans un virtuel imaginaire, doté de propriétés génératives, qui permettent de faire des prévisions&rdquo;</br>
+						</blockquote>
+						<p align="right">R. Thom 2009</p>
+						<a href="http://www.amazon.fr/Pr%C3%A9dire-nest-expliquer-Rene-Thom/dp/2081224984/ref=sr_1_1?ie=UTF8&qid=1384529013&sr=8-1&keywords=predire+n%27est+pas+expliquer">
+						  <img width="160" height="238" src="img/thom.jpg" alt="couverture livre Rene Thom">
+						</a>
+					</section>
+					<section>
+						<h3>Le principe</h3>
+						<ul>
+						  <li>Un Modèle inspiré des travaux de T. Schelling (1971) sur la ségrégation</li>
+						  <li>Un automate cellulaire où chaque agent est une cellule.</li>
+						  <li>Où l'on va s'intéresser aux formes de ségrégation spatiales qui peuvent se mettre en place.</li>
+						  <li>Une cellule est un agriculteur</li>
+						</ul>
+					</section>
+					<section>
+						<h3>La formalisation</h3>
+						<p>Les interactions entre les cellules seront basées sur une fonction d'utilité</p>
+						\[ U = r * alpha + s * bêta \]
+						<p align="left"> où</p>
+						<ul>
+						  <li>r est le rendement des cellules</li>
+						  <li>s est la pression sociale</li>
+						  <li>alpha + bêta = 1</li>
+						<ul>
+						<table>
+						  <td>
+						    <b>Pour les conventionnels</b></br>
+						    <ul>
+						      <li>alpha est plus important que bêta</li>
+						    </ul>
+						  </td>
+						  <td>
+						    <b>Pour les bio</b></br>
+						    <ul>
+						      <li>bêta est plus important que alpha</li>
+						    </ul>
+						  </td>
+						</table>
+						<p> ce sont les mêmes valeurs qui sont utiliser de manière croisée</p>
+					</section>
+					<section>
+						<h3>Ce qui donnait par exemple : </h3>
+						<video preload="auto" controls="controls" src="video/ex1.webm"></video>
+					</section>
+					<section>
+						<h3>Pour faire suite?</h3>
+						<p>Nous avons voulu donner une suite à ce travail, mais l'opposions bio VS OGM n'était pas forcement 
+						utilisable. Nous avons donc choies de nous intéresser à une réalité moins tranchée :</p>
+						<h3>biologique VS conventionnel</h3>
+					</section>
+					
+				</section>
+				<!-- MATERIELS ET METHODES-->
+				<section>
+					<section>
+						<h2>Matériels et méthodes</h2>	
+					</section>
+					<section>
+						<h2>La bio en France, où en est-on?</h2>
+						<p>Des données en <a href="http://www.data.gouv.fr/DataSet/30378896">openData</a> pour 2010<p>
+						<img height="400" src="img/cartes_AB.png" alt="Carte de France de l'AB">
+						<small>le script R est en <a href="#/6/1">annexe</a></small>
+					</section>
+					<section>
+						<h2>Ce qui donne en négatif pour l'agriculture conventionnelle ...</h2>
+						<img height="400" src="img/agri-conv-2010.png" alt="Carte de France de l'agriculture conventionnelle">
+						<p>la gamme de valeur pour l'initialisation du modèle sera donc entre 91 et 100</p>
+					</section>
+					<section>
+					<h3>En deux mots ... comment a t-on procédé?</h3>
+					<ol>
+					  <li>On explore l'autre extrémiter des valeur du modèle...</li>
+					  <li>Un modèle multi-agents developpé sur <a href="http://ccl.northwestern.edu/netlogo/">Netlogo</a></li>
+					  <li>Une analyse de sensibilité avec <a href="http://www.openmole.org/">OPENMOLE</a> sur <a href="http://www.unilim.fr/sci/wiki/cali/accueil">CALI</a></li>
+					  <li>Une exploration des résultats avec <a href="http://www.r-project.org/">R</a></li>							
+					</ol>
+					</section>
+					<section data-background="img/electrocardiogram.png" data-background-transition="slide">
+					<h3>Et l'analyse de sensibilité?</h3>
+					<ol>
+					  <li>20 réplications par paramétrage</li>
+					  <li>une population d'agriculteur conventionnel initiale entre 91 et 100% par pas de 0.1</li>
+					  <li>un alpha entre 0 et 1 pas pas de 0.1</li>
+					  <li>l'impacte des politiques publique de 0 à 0.2 par 0.1</li>
+					  <li>l'acceptation de l'agriculture conventionnelle entre 0.8 et 1 par 0.2</li>	
+					  <li>un seuil d'utilité entre 0 et 1 par 0.1</li>	
+					</ol>
+					</section>
+				</section>
+				<!-- RESULTATS et DISCUSSIONs-->
+				<section>
+					<section>
+					  <h2>RESULTATS et DISCUSSIONs</h2>
+					</section>
+					<section>
+					  <h2>Exploration du système</h2>
+					  <img height="450" src="img/espace_des_phases.png" alt="résultats de l'exploration de l'espace des paramètres sous forme de tuiles">
+					  
+					</section>
+					<section>
+					  <h2>Exploration du système</h2>
+					  <p>Le nombre d'agriculteurs en fonction d'alpha pour un seuil de 0.8</p>
+					  <img height="450" src="img/boxplot-pct-conv-2.png" alt="résultats de l'exploration de l'espace des paramètres sous forme de tuiles">
+					  
+					</section>
+					<section>
+					  <h2>Exploration du système</h2>
+					  <p>la fragmentation des pratiques en fonction du seuil</p>
+					  <img height="450" src="img/FragVSseuil.png" alt="résultats de l'exploration de l'espace des paramètres sous forme de tuiles">
+					</section>
+					<section>
+					  <h2>Exploration du système</h2>
+					  <p>et si on associe les résultats à la carte? Juste pour voire!</p>
+					  <img height="450" src="img/carte_prospective_equ_pezMAPS6.png" alt="résultats des simulations à l'échelle de la France">
+					</section>
+					<section>
+					  <h2>Et si on introduit des aides?</h2>
+					  <img height="450" src="img/isoAnisoLocalCites.png" alt="population de localités en fonction de l'environnement chargé à l'initialisation">
+					  <p>
+					    La compétition entre les agents ne varie pas fonction des différents espaces, mais...
+					  </p>
+					</section>
+				</section>
+				<!-- CONCULSION -->
+				<section>
+					<section>
+					<h2> Conclusion</h2>
+					</section>
+					<section data-background="img/cembra2nb.jpg" data-background-transition="slide">
+						<h3>Des conclusions sur le modèle</h3>
+						<ul>
+						  <li>L'espace influence moins la survie des localités que la répartitions des parcelles dans l'espace</li>
+						  <li>La demande a une conséquence forte sur la structuration des paysages</li>							
+						</ul>
+						<small>crédit photo : E.DELAY</small>
+					</section>
+					<section>
+						<h3>Les SMA, le temps long et les SHS</h3>
+						<p align="left" >Les SMA permettent :						
+						</p>
+						<ol>
+						<li>d'accompagner la réflexion du chercheur</li>
+						<li>d'explorer des comportements et des configurations difficilement envisageables</li>
+						<li>de préparer à la réception et à l'identification de comportements réels</li>							
+						</ol>
+						
+					</section>
+					<section>
+						<h3>Une co-construction entre histoire et géographie</h3>
+						<p>Un travail réalisé avec <a hraf="http://www.univ-tours.fr/recherche/equipe-laboratoire-archeologie-et-territoires-citeres-lat--116951.kjsp">
+						Laboratoire Archéologie et Territoire</a> de l'UMR 7324 CITERES (Tours)
+						</p>
+						<p align="left">
+						Deux pistes pour la suite : 
+						<ol>
+						  <li>affiner la granularité des agents pour explorer les implications des comportements</li>
+						  <li>explorer le modèle sous un autre angle</li>
+						</ol>
+						</p>
+					</section>
+				</section>
+				<section data-background="img/fin.jpg" data-background-transition="slide">
+					<h1>Merci de votre</br>attention</h1>
+					
+					<small>réalisé avec <a href="https://github.com/hakimel/reveal.js">reveal.js</a></small></br>
+					<small>crédit photo : <a href="http://www.flickr.com/photos/misnyot/6357634305/sizes/m/in/photostream/">Thomas Misnyovszki </a> on Flick'r</small>
+				</section>
+				<!-- ANNEXES -->
+				<section>
+					<section>
+					<h2> Annexes</h2>
+					</section>
+					<section>
+						<h3>script R <a href="#/2/1">opendata</a></h3>
+						<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						    #script pour l'article MAPS5 sur l'agriculture biologique
+						    #l'objectif est de pouvoir proposer une carte des départements FR avec des données de la bio
+						    ##les données ont été télécharger sur data.gouv.fr
+						    #les données du RGA http://www.data.gouv.fr/DataSet/551794
+						    #les surfaces en AB http://www.data.gouv.fr/DataSet/30378864
+						    #les nombre de producteurs http://www.data.gouv.fr/DataSet/30378896
+
+						    #auteur : E.DELAY (GEOLAB université de Limoges)
+						    rm(list=ls())
+						    setwd("~/git/publications/maps5/data/data_bio/")
+
+						    #lecture des données charger depuis data.gouv.fr
+						    data_agri_general<-read.csv("Donnees_principales__canton_departements_.csv", head=TRUE, sep=";",quote = '"')
+						    data_exp_bio<-read.csv("departements_Bio.csv", head=TRUE, sep=";",quote = '"')
+						    data_surf_bio<-read.csv("surface_bio_departements.csv", head=TRUE, sep=";")
+
+						    #on ne peut travailler que sur 2010 seul année en commun donc il faut découper les données
+						    #data general sur l'agriculture
+						    data_agri_ge2010<-subset(data_agri_general,select=c(Libellé.du.département,X2010, X2010.2))
+						    colnames(data_agri_ge2010)<-c("departement","nb.exploit","surf")
+						    data_agri_ge2010$departement<-as.character(data_agri_ge2010$departement)
+
+						    data_surf_agri2010<-as.data.frame(rowsum(data_agri_ge2010[,3],group=data_agri_ge2010$departement))
+
+						    #data sur le nombre d'exploitant en Bio
+						    data_exp_bio2010<-subset(data_exp_bio, Annee==2010,select=c(Annee,id_departement,Departement,Producteurs))
+
+
+						    #data sur les surfaces en bio
+						    data_surf_bio2010<-subset(data_surf_bio, Annee==2010)
+						    for(i in c(6:9)){
+						      data_surf_bio2010[,i]<-as.numeric(data_surf_bio2010[,i])
+						    }
+						    data_surf_bio2010$Surf.tot<-data_surf_bio2010[,6] + 
+										data_surf_bio2010[,7] + 
+										data_surf_bio2010[,8] +
+										data_surf_bio2010[,9]
+
+						    data_surf_bio2010D<-as.data.frame(as.table(rowsum(data_surf_bio2010[,10],group=data_surf_bio2010$Departement)))
+						    data_surf_bio2010D$Var1<-as.character(data_surf_bio2010D$Var1)
+						    data_surf_bio2010D$Freq<-as.numeric(data_surf_bio2010D$Freq)
+
+						    table.agri<-NULL
+						    for(i in 1 : length(data_surf_bio2010D[,1])){ #98 valeurs
+						      for(j in 1 : length(data_agri_ge2010[,1])) { #100 valeurs
+							if(toupper(data_agri_ge2010$departement[j])==data_surf_bio2010D$Var1[i]){
+							  tps<-as.data.frame(c(data_surf_bio2010D[i,], data_agri_ge2010[j,]))
+							  table.agri<-rbind(table.agri, tps)
+							}
+						      }
+						    }
+
+						    #reconfigurer le data.frame avec seulement les colones a conserver dans l'ordre
+						    table.agri<-table.agri[,c("departement", "nb.exploit", "Freq","surf")]
+						    colnames(table.agri)<-c("departement", "nb.exploit", "surf.bio","surf.tot")
+
+
+						    #calcul du pct de terre en Bio
+						    table.agri$pct.bio<- (table.agri$surf.bio * 100) / table.agri$surf.tot
+						    boxplot(table.agri$pct.bio, outline = FALSE)
+						    summary(table.agri$pct.bio)
+
+						    ##ICI on se retrouve avec des valeur abérantes pour certains départements... donc
+						    ##il faut les suprimer
+						    for (i in 1 : length(table.agri[,1])){
+						      if (table.agri$pct.bio[i]> 15) {
+							table.agri$pct.bio[i]<-NA
+						      }
+						    }
+
+						    ## la partie qui s'intéresse aux nombre de ferme bio par départements
+						    for (i in 1 : length(table.agri[,1])){
+						      for (j in 1 : length(data_exp_bio2010[,1])){
+							if (toupper(table.agri$departement[i])==data_exp_bio2010$Departement[j]){
+							  table.agri$agri.bio[i]<-data_exp_bio2010$Producteurs[j]
+							}
+						      }
+						    }
+						    #reconfigurer le data.frame avec seulement les colones a conserver dans l'ordre
+						    table.agri<-table.agri[,c("departement", "surf.bio","surf.tot","pct.bio","agri.bio","nb.exploit")]
+						    table.agri$pct.agri.bio<- (table.agri$agri.bio * 100) / table.agri$nb.exploit 
+
+						    summary(table.agri$pct.agri.bio) #le dernier decile est autour de 10%
+						    boxplot(table.agri$pct.agri.bio, outline = FALSE)
+						    #il faut là encore suprimer les valeurs abusives
+						    for (i in 1 : length(table.agri[,1])){
+						      if (table.agri$pct.agri.bio[i]> 10) {
+							table.agri$pct.agri.bio[i]<-NA
+						      }
+						    }
+
+						    ##Maintenant on veux faire une belle carte avec les département français!
+						    #chargement des librairies
+						    library("rgdal")
+						    library("maptools")
+						    library("ggplot2")
+						    library("plyr")
+						    library("grid")##librairie pour arenger les graphes les uns a coté des autres avec ggplot
+
+						    #chragement du shapeFile
+						    dep_shp<-readOGR(dsn="/home/delaye/git/publications/maps5/data/shp_dep/", layer="departement_geofla")
+						    dep_shp@data$NOM_DEPT<-as.character(dep_shp@data$NOM_DEPT)
+
+						    ##A la sortie de la boucle j'ai les pct de bio dans le shp
+						    for (i in 1 : length(table.agri[,1])){
+						      for (j in 1 : length(dep_shp@data$NOM_DEPT)){
+							if (toupper(table.agri$departement[i])==dep_shp@data$NOM_DEPT[j]){
+							  dep_shp@data$pct.bio[j]<-table.agri$pct.bio[i]
+							  dep_shp@data$pct.agri.bio[j]<-table.agri$pct.agri.bio[i]
+							}
+						      }
+						    }
+
+
+						    ##let's go for ggplot2
+						    dep_shp@data$id<-rownames(dep_shp@data)
+						    dep_shp.point<-fortify(dep_shp,region="id")
+						    dep_shp.df<-join(dep_shp.point, dep_shp@data, by="id")
+						    write.csv(dep_shp.df, "dep_shp_df.csv")
+
+
+						    p<-ggplot()+
+						      geom_polygon(data=dep_shp.df, aes(x=long,y=lat,group=group,fill=pct.bio))+
+						      theme_bw()+
+						      coord_equal()
+
+						    q<-ggplot()+
+						      geom_polygon(data=dep_shp.df, aes(x=long,y=lat,group=group,fill=pct.agri.bio))+
+						      theme_bw()+
+						      coord_equal()
+
+						    vplayout <- function(x, y) viewport(layout.pos.row = x, layout.pos.col = y)
+
+						    grid.newpage()
+						    pushViewport(viewport(layout = grid.layout(1, 2)))
+						    print(p, vp = vplayout(1, 1))
+print(q, vp = vplayout(1, 2))
+
+# q
+# q
+
+						</code></pre>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				math: {
+					// mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+					config: 'TeX-AMS_HTML-full'
+				},
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'plugin/math/math.js', async: true },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
