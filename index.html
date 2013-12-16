@@ -66,11 +66,11 @@
 						    <ul>
 						      <li><b><a href="http://www.univ-tours.fr/acces-rapide/mme-amalric-marion-213061.kjsp">Marion Amalric</a> </b>(CITERES)</li>
 						      <li><b><a href="http://www.parisgeo.cnrs.fr/spip.php?article5&lang=fr">Anaud Banos</a> </b> (UMR 8504 Géographie-Cités)</li>
-						      <li>Marta Debolini (INRA - UMR EMMAH)</li>
+						      <li><a href="http://www4.paca.inra.fr/emmah">Marta Debolini</a> (INRA - UMR EMMAH)</li>
 						      <li><a href="http://recherche.flsh.unilim.fr/geolab/etienne-delay/">Etienne Delay</a> (GEOLAB)</li>
-						      <li>Aurelie Gaudieux (CEMOI et C3EDM)</li>
+						      <li><a href="http://cemoi.univ-reunion.fr/index.php?option=com_content&view=category&id=44&Itemid=57">Aurelie Gaudieux</a> (CEMOI et C3EDM)</li>
 						      <li><a href="http://www.hugothierry.com">Hugo Thierry</a> (UMR DYNAFOR -  INRA/INPT-ENSAT )</li>
-						      <li>Romain Reulier (LETG)</li>
+						      <li><a href="https://letg.univ-nantes.fr/fr/laboratoire/3/membre/298">Romain Reulier</a> (LETG)</li>
 						   </ul>
 						  </td>
 						  <td> 
@@ -189,10 +189,10 @@
 					  <li>20 réplications par paramétrage</li>
 					  <li>une population d'agriculteur conventionnel initiale entre 91 et 100% par pas de 0.1</li>
 					  <li>un alpha entre 0 et 1 pas pas de 0.1</li>
-					  <li>l'impacte des politiques publique de 0 à 0.2 par 0.1</li>
-					  <li>l'acceptation de l'agriculture conventionnelle entre 0.8 et 1 par 0.2</li>	
+					  <li>l'impacte des politiques publique de 0 à 0.2 par 0.1</li>	
 					  <li>un seuil d'utilité entre 0 et 1 par 0.1</li>	
 					</ol>
+					<p>&rarr;600 000 simulations</p>
 					</section>
 				</section>
 				<!-- RESULTATS et DISCUSSIONs-->
@@ -202,19 +202,14 @@
 					</section>
 					<section>
 					  <h2>Exploration du système</h2>
-					  <img height="450" src="img/espace_des_phases.png" alt="résultats de l'exploration de l'espace des paramètres sous forme de tuiles">
+					  <img height="450" src="img/espace_des_phases-help 0 .png" alt="résultats de l'exploration de l'espace des paramètres sous forme de tuiles">
 					  
 					</section>
 					<section>
 					  <h2>Exploration du système</h2>
-					  <p>Le nombre d'agriculteurs en fonction d'alpha pour un seuil de 0.8</p>
-					  <img height="450" src="img/boxplot-pct-conv-2.png" alt="résultats de l'exploration de l'espace des paramètres sous forme de tuiles">
+					  <p>Le nombre d'agriculteurs(y) en fonction d'alpha (x) pour différentes valeurs de seuil</p>
+					  <img height="450" src="img/maps6.png" alt="résultats de l'exploration de l'espace des paramètres sous forme de tuiles">
 					  
-					</section>
-					<section>
-					  <h2>Exploration du système</h2>
-					  <p>la fragmentation des pratiques en fonction du seuil</p>
-					  <img height="450" src="img/FragVSseuil.png" alt="résultats de l'exploration de l'espace des paramètres sous forme de tuiles">
 					</section>
 					<section>
 					  <h2>Exploration du système</h2>
@@ -222,11 +217,48 @@
 					  <img height="450" src="img/carte_prospective_equ_pezMAPS6.png" alt="résultats des simulations à l'échelle de la France">
 					</section>
 					<section>
+					  <h2>quelques explications</h2>
+					  <ol>
+					    <li>Si &alpha; &uarr;</li>
+					      <ul>
+						<li>On donne beaucoup de poids à l'économie et de moins en moins au social</li>
+						<li>De manière générale on va favoriser les agriculteurs conventionnels</li>
+					      </ul>
+					    <li>Si le seuil de la fonction d'utilité &uarr;</li>
+					      <ul>
+						<li>On augmente l'intolérance des agriculteurs à leur conditions (qui se résume a économie et social)</li>
+						<li>De manière générale on va favoriser l'agriculture biologique dans des valeurs basses d'&alpha;</li>
+					      </ul>
+					  </ol> 
+					</section>
+					<section>
 					  <h2>Et si on introduit des aides?</h2>
-					  <img height="450" src="img/isoAnisoLocalCites.png" alt="population de localités en fonction de l'environnement chargé à l'initialisation">
-					  <p>
-					    La compétition entre les agents ne varie pas fonction des différents espaces, mais...
-					  </p>
+					  <p>entre 0, 10 et 20% des revenus</p>
+					  <video preload="auto" controls="controls" src="video/tiles.webm"></video>
+					</section>
+					<section>
+					  <h2>Et si on introduit des aides?</h2>
+					  <video preload="auto" controls="controls" src="video/boxplotsHelp.webm"></video>
+					</section>
+					<section>
+					  <h2>Et si on introduit des aides?</h2>
+					  <p>entre 0 10 et 20% des revenus</p>
+					  <ol>
+					    <li>Si les aides &uarr;, <b>pas de surprise</b></li>
+					      <ul>
+						<li>on favorise l'installation en bio</li>
+						<li>on augmente les situations favorables</li>
+					      </ul>
+					    <li>Mais une surprise!</li>
+					      <ul>
+						<li>on nivelle le nombre d'agriculteurs autour d'un équilibre (dynamique?)</li>
+					      </ul>
+					  </ol> 
+					</section>
+					<section>
+					  <h2>une petie carte?</h2>
+					  <p>et si on associe les résultats à la carte? Juste pour voire!</p>
+					  <img height="450" src="img/carte_" alt="résultats des simulations à l'échelle de la France">
 					</section>
 				</section>
 				<!-- CONCULSION -->
@@ -242,30 +274,15 @@
 						</ul>
 						<small>crédit photo : E.DELAY</small>
 					</section>
-					<section>
-						<h3>Les SMA, le temps long et les SHS</h3>
-						<p align="left" >Les SMA permettent :						
-						</p>
-						<ol>
-						<li>d'accompagner la réflexion du chercheur</li>
-						<li>d'explorer des comportements et des configurations difficilement envisageables</li>
-						<li>de préparer à la réception et à l'identification de comportements réels</li>							
-						</ol>
-						
+					<section data-background="img/cembra2nb.jpg" data-background-transition="slide">
+						<h3>Un pure produit MAPS?</h3>
+						<ul>
+						  <li>L'espace influence moins la survie des localités que la répartitions des parcelles dans l'espace</li>
+						  <li>La demande a une conséquence forte sur la structuration des paysages</li>							
+						</ul>
+						<small>crédit photo : E.DELAY</small>
 					</section>
-					<section>
-						<h3>Une co-construction entre histoire et géographie</h3>
-						<p>Un travail réalisé avec <a hraf="http://www.univ-tours.fr/recherche/equipe-laboratoire-archeologie-et-territoires-citeres-lat--116951.kjsp">
-						Laboratoire Archéologie et Territoire</a> de l'UMR 7324 CITERES (Tours)
-						</p>
-						<p align="left">
-						Deux pistes pour la suite : 
-						<ol>
-						  <li>affiner la granularité des agents pour explorer les implications des comportements</li>
-						  <li>explorer le modèle sous un autre angle</li>
-						</ol>
-						</p>
-					</section>
+
 				</section>
 				<section data-background="img/fin.jpg" data-background-transition="slide">
 					<h1>Merci de votre</br>attention</h1>
